@@ -1,4 +1,4 @@
-// ================= HOME PAGE ==================
+// HOME PAGE 
 const learnMoreBtn = document.getElementById("learnMoreBtn");
 if (learnMoreBtn) {
   learnMoreBtn.addEventListener("click", () => {
@@ -6,7 +6,7 @@ if (learnMoreBtn) {
   });
 }
 
-// ================= BOARD PAGE ==================
+// BOARD PAGE
 const homeBtn = document.getElementById("homeBtn");
 if (homeBtn) {
   homeBtn.addEventListener("click", () => {
@@ -20,7 +20,7 @@ let draggedTask = null;
 // Load tasks from localStorage when page loads
 document.addEventListener("DOMContentLoaded", loadTasksFromStorage);
 
-// -------------- DRAG AND DROP -----------------
+//  DRAG AND DROP 
 function makeDraggable(task) {
   task.addEventListener("dragstart", () => {
     draggedTask = task;
@@ -53,7 +53,7 @@ columns.forEach((column) => {
   });
 });
 
-// -------------- ADD, EDIT, DELETE --------------
+//  ADD, EDIT, DELETE 
 document.querySelectorAll(".add-btn").forEach((btn) => {
   const column = btn.closest(".column");
   const input = column.querySelector("input");
@@ -72,7 +72,7 @@ document.querySelectorAll(".add-btn").forEach((btn) => {
   });
 });
 
-// -------------- CREATE TASK ELEMENT --------------
+//  CREATE TASK ELEMENT 
 function createTaskElement(text) {
   const task = document.createElement("div");
   task.classList.add("task");
@@ -104,7 +104,7 @@ function createTaskElement(text) {
   return task;
 }
 
-// -------------- SAVE TO LOCAL STORAGE --------------
+//  SAVE TO LOCAL STORAGE 
 function saveTasksToStorage() {
   const data = {};
 
@@ -118,7 +118,7 @@ function saveTasksToStorage() {
   localStorage.setItem("taskFlowData", JSON.stringify(data));
 }
 
-// -------------- LOAD FROM LOCAL STORAGE --------------
+//  LOAD FROM LOCAL STORAGE
 function loadTasksFromStorage() {
   const data = JSON.parse(localStorage.getItem("taskFlowData"));
 
@@ -126,7 +126,7 @@ function loadTasksFromStorage() {
 
   document.querySelectorAll(".column").forEach((column, index) => {
     const taskList = column.querySelector(".task-list");
-    taskList.innerHTML = ""; // Clear previous tasks
+    taskList.innerHTML = ""; 
 
     const tasks = data[`column${index}`] || [];
     tasks.forEach((text) => {
