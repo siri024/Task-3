@@ -1,4 +1,4 @@
-/* -------- Global Reset -------- */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* -------- Home Page -------- */
+/* Home Page */
 .home-body {
   min-height: 100vh;
   background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6a95);
@@ -63,7 +63,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* -------- Board Page -------- */
+/* Board Page */
 .board-body {
   background: #edf0f0;
   min-height: 100vh;
@@ -189,7 +189,7 @@ input:focus {
   transition: background 0.3s ease;
 }
 
-/* -------- Responsive -------- */
+/* Responsive */
 @media (max-width: 768px) {
   .board-container {
     flex-direction: column;
